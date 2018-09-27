@@ -1,5 +1,8 @@
 {
   "name": "om_design",
   "private": true,
-  "dependencies": {}
+  "dependencies": {},
+  "devDependencies": {
+    "webpack": "^4.20.2"
+  }
 }
