@@ -1,0 +1,28 @@
+<h1> Welcome to: OM Design</h1>
+
+<form action="/bags" method="get">
+  <input type="text" name="material" placeholder="What kind of material?">
+  <input type="submit">
+</form>
+
+<% categories = [ 'Genuine leather', 'Silicone gel' ] %>
+
+<h2>Find high quality bags</h2>
+<ul>
+<% categories.each do |category| %>
+  <li><%= category.capitalize %></li>
+<% end %>
+</ul>
+
+
+<h2>We have many beautiful bags you may be looking for!</h2>
+
+<ul>
+  <% @bags.each do |id, bag| %>
+    <li>
+      <%= link_to bag[:name], bag_path(id) %>
+      <%= bag[:name] %>, <%= bag[:color] %>,
+      <%= bag[:price] %>, <%= bag[:material] %>
+    </li>
+  <% end %>
+</ul>
