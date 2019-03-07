@@ -1,28 +1,130 @@
-<h1> Welcome to: OM Design</h1>
+<!-- <div class="container">
+  <div class="form">
+    <form action="/bags" method="get">
+      <input type="text" name="material" placeholder="What kind of material?">
+      <input type="submit">
+    </form>
+  </div>
 
-<form action="/bags" method="get">
-  <input type="text" name="material" placeholder="What kind of material?">
-  <input type="submit">
-</form>
+  <% categories = [ 'Genuine leather', 'Silicone gel' ] %> -->
 
-<% categories = [ 'Genuine leather', 'Silicone gel' ] %>
+  <!-- <div class="all">
+      <ul>
+        <% @bags.each do |id, bag| %>
+          <li>
+            <%= link_to bag[:name], bag_path(id) %>, <%= bag[:color] %>,
+            <%= bag[:price] %>, <%= bag[:material] %>
+          </li>
+        <% end %>
+      </ul>
+  </div>
+</div> -->
 
-<h2>Find high quality bags</h2>
-<ul>
-<% categories.each do |category| %>
-  <li><%= category.capitalize %></li>
-<% end %>
-</ul>
+<div class="wrapper">
 
+  <div class="header">
+    <h1 class="header__title">Our Bags</h1>
+  </div>
 
-<h2>We have many beautiful bags you may be looking for!</h2>
+  <div class="cards">
 
-<ul>
-  <% @bags.each do |id, bag| %>
-    <li>
-      <%= link_to bag[:name], bag_path(id) %>
-      <%= bag[:name] %>, <%= bag[:color] %>,
-      <%= bag[:price] %>, <%= bag[:material] %>
-    </li>
-  <% end %>
-</ul>
+    <div class=" card [ is-collapsed ] ">
+      <div class="card__inner [ js-expander ]">
+        <span>Card</span>
+        <i class="fa fa-folder-o"></i>
+      </div>
+      <div class="card__expander">
+        <i class="fa fa-close [ js-collapser ]"></i>
+        Expander
+      </div>
+    </div>
+
+    <div class=" card [ is-collapsed ] ">
+      <div class="card__inner [ js-expander ]">
+        <span>Card</span>
+        <i class="fa fa-folder-o"></i>
+      </div>
+      <div class="card__expander">
+        <i class="fa fa-close [ js-collapser ]"></i>
+        Expander
+      </div>
+    </div>
+
+    <div class=" card [ is-collapsed ] ">
+      <div class="card__inner [ js-expander ]">
+        <span>Card</span>
+        <i class="fa fa-folder-o"></i>
+      </div>
+      <div class="card__expander">
+        <i class="fa fa-close [ js-collapser ]"></i>
+        Expander
+      </div>
+    </div>
+
+    <div class=" card [ is-collapsed ] ">
+      <div class="card__inner [ js-expander ]">
+        <span>Card</span>
+        <i class="fa fa-folder-o"></i>
+      </div>
+      <div class="card__expander">
+        <i class="fa fa-close [ js-collapser ]"></i>
+        Expander
+      </div>
+    </div>
+
+    <div class=" card [ is-collapsed ] ">
+      <div class="card__inner [ js-expander ]">
+        <span>Card</span>
+        <i class="fa fa-folder-o"></i>
+      </div>
+      <div class="card__expander">
+        <i class="fa fa-close [ js-collapser ]"></i>
+        Expander
+      </div>
+    </div>
+
+    <div class=" card [ is-collapsed ] ">
+      <div class="card__inner [ js-expander ]">
+        <span>Card</span>
+        <i class="fa fa-folder-o"></i>
+      </div>
+      <div class="card__expander">
+        <i class="fa fa-close [ js-collapser ]"></i>
+        Expander
+      </div>
+    </div>
+
+    <div class=" card [ is-collapsed ] ">
+      <div class="card__inner [ js-expander ]">
+        <span>Card</span>
+        <i class="fa fa-folder-o"></i>
+      </div>
+      <div class="card__expander">
+        <i class="fa fa-close [ js-collapser ]"></i>
+        Expander
+      </div>
+    </div>
+
+    <div class=" card [ is-collapsed ] ">
+      <div class="card__inner [ js-expander ]">
+        <span>Card</span>
+        <i class="fa fa-folder-o"></i>
+      </div>
+      <div class="card__expander">
+        <i class="fa fa-close [ js-collapser ]"></i>
+        Expander
+      </div>
+    </div>
+
+    </div>
+
+  </div>
+
+</div>
+
+<!-- <h2>Categories</h2>
+    <ul>
+      <% categories.each do |category| %>
+        <li><%= category.capitalize %></li>
+        <% end %>
+    </ul> -->

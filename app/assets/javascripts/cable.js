@@ -11,3 +11,11 @@
   App.cable = ActionCable.createConsumer();
 
 }).call(this);
+
+$('.buy').click(function(){
+  $('.bottom').addClass("clicked");
+});
+
+$('.remove').click(function(){
+  $('.bottom').removeClass("clicked");
+});

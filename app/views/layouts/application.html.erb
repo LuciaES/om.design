@@ -1,16 +1,75 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>OmDesign</title>
-    <%= csrf_meta_tags %>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+    <title>OM Design</title>
+
+    <meta name="description" content="Fashionable bags & accessories at amazing prices.">
+    <meta property="og:title" content="OM Design - Fashionable bags at amazing prices">
+    <meta property="og:image" content="facebook-card.jpg">
+    <meta property="og:description" content="OM Design stirves to bring you the latest designs to keep you looking amazing.">
+    <meta property="og:site_name" content="OM Design"/>
+
     <%= csp_meta_tag %>
+    <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+
+    <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+
+  <% if request.ssl? %>
+    <%= stylesheet_link_tag 'https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css' %>
+    <%= javascript_include_tag 'https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js' %>
+  <% else %>
+    <%= stylesheet_link_tag 'http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css' %>
+    <%= javascript_include_tag 'http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js' %>
+  <% end %>
+
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   </head>
+
+    <style>
+      a { color: #00CED1; } /* CSS link color */
+    </style>
+
+    <div id="nav-logo">
+      <%= image_tag "omlogo.png", alt: "OM Logo", height: 100; %>
+      <h3> OM Design </h3>
+        <div id ="cart_qty">
+          <%= link_to "#{current_order.order_items.size} Items in Cart", cart_path, class: "btn btn-link" %>
+        </div>
+    </div>
 
   <body>
     <%= yield %>
-    <footer> OM Design(footer)</footer>
+      <div class="container">
+        <div class="row">
+          <div class="col-xs-6 text-right">
+            <h1 class="cart-text"><%= render 'layouts/cart_text' %></h1>
+          </div>
+        </div>
+      </div>
   </body>
+
+  <footer>
+    <div id="footer-media">
+      <a href="#"><i class="fab fa-instagram"></i></a>
+      <a href="#"><i class="fab fa-facebook"></i></a>
+      <a href="#"><i class="fab fa-twitter"></i></a>
+    </div>
+
+    <div class="footer-links">
+      <%= link_to "Know more about us", about_path %>
+      <%= link_to "Discover all our bags", bags_path %>
+      <%= link_to "Discover all our Accessories", accessories_path %>
+      <%= link_to "Contact us", contact_path %>
+    </div>
+  </footer>
+
 </html>
+
+

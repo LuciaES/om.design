@@ -1,0 +1,26 @@
+// Place all the styles related to the Carts controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+#shopping-cart{
+  text-align: center;
+  color: #000000;
+  padding-left: 10;
+  background: #ffffff;
+  font: bolder;
+}
+
+#cart_qty{
+  .btn-link{
+  color: #000000;
+  text-align: right;
+  }
+}
+
+
+#text-center{
+  text-align: center;
+    a {
+      color: #000000;
+    }
+}
+

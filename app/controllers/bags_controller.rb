@@ -13,8 +13,6 @@ class BagsController < ApplicationController
     end
     end
   end
-    #@material = BAGS.all
-    #@bags all will be available in the view. Info from database
 
   def show
     @bags = BAGS[params[:id].to_i]

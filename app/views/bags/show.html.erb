@@ -1,3 +1,57 @@
-<h1> Welcome to: OM Design </h1>
-<h2> <%= @bags[:name] %> </h2>
-<h3> <%= @bags[:color] %>, <%= @bags[:material] %>, <%= @bags[:price] %> </h3>
+<!-- <div class=container>
+  <div class="card">
+    <%= image_tag "bag.jpg", alt: "bag photo" %>
+  <div class="info">
+    <h4><b><%= @bags[:name] %></b></h4>
+    <p><%= @bags[:color] %></p>
+    <p><%= @bags[:material] %></p>
+    <p><%= @bags[:price] %></p>
+  </div>
+  </div>
+</div> -->
+<div class="container">
+  <div class="wrapper">
+    <div class="container_item">
+      <div class="top">
+        <%= image_tag "bag.jpg", alt: "bag photo" %>
+        <div class="info">
+        </div>
+          <div class="bottom">
+            <div class="left">
+              <div class="details">
+                <h1><b><%= @bags[:name] %></b></h1>
+                <p><%= @bags[:price] %></p>
+              </div>
+                <div class="buy"><i class="fas fa-shopping-bag"> add to cart</i></div>
+                </div>
+                  <div class="right">
+                    <div class="done"><i class="material-icons">done</i></div>
+                      <div class="details">
+                        <p>Added to your cart</p>
+                      </div>
+                        <div class="remove"><i class="material-icons">clear</i></div>
+                        </div>
+                    </div>
+                  </div>
+                    <div class="inside">
+                      <div class="icon"><i class="material-icons">info</i></div>
+                        <div class="contents">
+                          <table>
+                            <tr>
+                              <th>Color</th>
+                              <th>Material</th>
+                            </tr>
+                              <tr>
+                                <td><p><%= @bags[:color] %></td>
+                                <td><p><%= @bags[:material] %></td>
+                              </tr>
+                          </table>
+                        </div>
+                      </div>
+                    </div>
+            </div>
+          </div>
+      </div>
+    </div>
+  </div>
+</div>

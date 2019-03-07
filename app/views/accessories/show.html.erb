@@ -1,0 +1,53 @@
+<!-- <div class=container>
+  <h1> Welcome to: OM Design </h1>
+  <h2> <%= @accessories[:name] %> </h2>
+  <h3> <%= @accessories[:color] %>, <%= @accessories[:material] %>, <%= @accessories[:price] %> </h3>
+</div> -->
+
+
+  <div class="wrapper">
+    <div class="container_item">
+      <div class="top">
+        <%= image_tag "bag.jpg", alt: "bag photo" %>
+        <div class="info">
+        </div>
+          <div class="bottom">
+            <div class="left">
+              <div class="details">
+                <h1><b><%= @accessories[:name] %></b></h1>
+                <p><%= @accessories[:price] %></p>
+              </div>
+                <div class="buy"><i class="fas fa-shopping-bag"> add to cart</i></div>
+                </div>
+                  <div class="right">
+                    <div class="done"><i class="material-icons">done</i></div>
+                      <div class="details">
+                        <p>Added to your cart</p>
+                      </div>
+                        <div class="remove"><i class="material-icons">clear</i></div>
+                        </div>
+                    </div>
+                  </div>
+                    <div class="inside">
+                      <div class="icon"><i class="material-icons">info</i></div>
+                        <div class="contents">
+                          <table>
+                            <tr>
+                              <th>Color</th>
+                              <th>Material</th>
+                            </tr>
+                              <tr>
+                                <td><p><%= @accessories[:color] %></td>
+                                <td><p><%= @accessories[:material] %></td>
+                              </tr>
+                          </table>
+                        </div>
+                      </div>
+                    </div>
+            </div>
+          </div>
+      </div>
+    </div>
+  </div>
+
+
